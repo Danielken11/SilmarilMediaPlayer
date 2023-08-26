@@ -1,0 +1,89 @@
+.button{
+    -fx-background-color: #0A0B0C;
+    -fx-background-radius: 0;
+}
+#playPauseButton{
+    -fx-background-color: #0A0B0C;
+    -fx-background-radius: 0;
+}
+#forwardButton{
+    -fx-background-color: #0A0B0C;
+    -fx-background-radius: 0;
+}
+#backButton{
+    -fx-background-color: #0A0B0C;
+    -fx-background-radius: 0;
+}
+#soundButton{
+    -fx-background-color: #0A0B0C;
+    -fx-background-radius: 0;
+}
+#speedButton{
+    -fx-background-color: #0A0B0C;
+    -fx-background-radius: 0;
+}
+#closeButton:hover{
+    -fx-background-color: #FD4949;
+    -fx-border-color:#FD4949;
+}
+#maximizeButton:hover{
+    -fx-opacity: 0.6;
+    -fx-background-color: #383B3E;
+    -fx-border-color: #5353d5;
+}
+#minimizeButton:hover{
+    -fx-opacity: 0.6;
+    -fx-background-color: #383B3E;
+    -fx-border-color: #5353d5;
+}
+#mediaSelectorButton{
+    -fx-background-color: #1e1f23;
+}
+#mainBorder{
+    -fx-background-color: #1e1f23;
+}
+#topBar{
+    -fx-background-color: #0A0B0C;
+}
+#appNameLabel{
+    -fx-text-fill: gray;
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
+}
+#controlPlayer{
+    -fx-background-color: #0A0B0C;
+    -fx-opacity: 0.9;
+}
+#mediaSlider .track{
+    -fx-background-color: #363535;
+    -fx-background-radius: 0;
+}
+#mediaSlider .bar{
+    -fx-padding: 1px;
+    -fx-background-insets: 0;
+}
+#mediaSlider{
+    -fx-accent:#5353d5;
+}
+#startLabel{
+    -fx-text-fill: #F2F2F3;
+    -fx-font-size: 15;
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
+}
+#fileNameLabel{
+    -fx-background-color: #0A0B0C;
+    -fx-text-fill: #F2F2F3;
+    -fx-pref-width: 50;
+}
+#timeLabel{
+    -fx-text-fill: #F2F2F3;
+}
+#currentTimeLabel{
+    -fx-text-fill: #F2F2F3;
+}
+#fileNameButton{
+    -fx-background-color: #0A0B0C;
+    -fx-background-radius: 0;
+    -fx-text-fill: #F2F2F3;
+}

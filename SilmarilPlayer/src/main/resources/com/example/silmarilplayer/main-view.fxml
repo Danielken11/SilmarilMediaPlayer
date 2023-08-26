@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainBorder" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.silmarilplayer.Controller">
+    <top>
+        <HBox fx:id="topBar" prefHeight="28.0" prefWidth="1000">
+            <children>
+                <StackPane>
+                    <padding>
+                        <Insets left="5.0" />
+                    </padding>
+                    <children>
+                        <ImageView>
+                            <image>
+                                <Image url="@Images/silmarilPlayerTopIco.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </StackPane>
+                <StackPane>
+                    <padding>
+                        <Insets left="5.0" />
+                    </padding>
+                    <children>
+                        <Label fx:id="appNameLabel" text="Silmaril Player" />
+                    </children>
+                </StackPane>
+                <Region prefHeight="28.0" prefWidth="664.0" HBox.hgrow="ALWAYS" />
+                <Pane prefHeight="27" prefWidth="35.0">
+                    <Button fx:id="minimizeButton" alignment="CENTER_RIGHT" layoutX="4.0" prefHeight="27.0" prefWidth="31.0">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@Images/minimizeImage.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <padding>
+                        <Insets right="0.0" />
+                    </padding>
+                </Pane>
+                <Pane prefHeight="27" prefWidth="35.0">
+                    <Button fx:id="maximizeButton" alignment="CENTER_RIGHT" layoutX="4.0" prefHeight="27.0" prefWidth="31.0">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@Images/maximizeImage.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <padding>
+                        <Insets right="0.0" />
+                    </padding>
+                </Pane>
+                <Pane prefHeight="27" prefWidth="35.0">
+                    <Button fx:id="closeButton" alignment="CENTER_RIGHT" layoutX="4.0" prefHeight="27.0" prefWidth="31.0">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@Images/closeImage.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <padding>
+                        <Insets right="1.0" />
+                    </padding>
+                </Pane>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+        <Button fx:id="mediaSelectorButton" onAction="#selectFile">
+            <graphic>
+                <ImageView>
+                    <image>
+                        <Image url="@Images/mediaChooser.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label fx:id="startLabel" text="Choose the file to play" />
+        </VBox>
+    </center>
+    <bottom>
+        <BorderPane fx:id="controlPlayer" prefHeight="80" prefWidth="1000">
+            <top>
+                <HBox alignment="CENTER" spacing="5">
+                    <Label fx:id="currentTimeLabel" />
+                    <ProgressBar fx:id="mediaSlider" prefHeight="8" prefWidth="900" progress="0.0" />
+                    <Label fx:id="timeLabel" />
+                </HBox>
+            </top>
+            <center>
+                <HBox alignment="CENTER" spacing="18">
+                    <children>
+                    <Button fx:id="speedButton" onAction="#speedControl">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@Images/speedImage.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="backButton" onAction="#skipBack">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@Images/leftArrow.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <ToggleButton fx:id="playPauseButton">
+                        <graphic>
+                            <ImageView fx:id="playPauseImageView">
+                                <image>
+                                    <Image url="@Images/playImage.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </ToggleButton>
+                    <Button fx:id="forwardButton" onAction="#moveForward">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@Images/rightArrow.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                        <ToggleButton fx:id="soundButton" alignment="CENTER_RIGHT" onAction="#soundControl">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@Images/soundImage.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                    </children>
+                </HBox>
+            </center>
+            <bottom>
+                <Button fx:id="fileNameButton" alignment="CENTER_LEFT" maxWidth="300" onAction="#selectFile" text="Select a file"/>
+            </bottom>
+        </BorderPane>
+    </bottom>
+</BorderPane>
